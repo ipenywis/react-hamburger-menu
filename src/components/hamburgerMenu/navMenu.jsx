@@ -9,33 +9,34 @@ const NavMenuContainer = styled.div`
 `;
 
 const NavList = styled.ul`
+  padding: 0 0.8em;
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 0.8em;
 `;
 
 const NavLink = styled(motion.li)`
   font-weight: 600;
-  font-size: 18px;
-  height: 35px;
+  height: 42px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: all 240ms ease-in-out;
 
   a {
     text-decoration: none;
-    color: #363636;
-    transition: all 180ms ease-in-out;
+    color: #444;
+    font-size: 20px;
+    transition: all 200ms ease-in-out;
+  }
 
-    &:hover {
+  &:hover {
+    a {
       color: #555;
     }
   }
 `;
 
-const menuItemVariants = {
+const variants = {
   show: {
     transform: "translateX(0em)",
     opacity: 1,
@@ -54,19 +55,13 @@ export function NavMenu({ isOpen }) {
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
-            hide: {
-              ...menuItemVariants.hide,
-              transition: {
-                delay: 0.05,
-                duration: 0.05,
-              },
-            },
             show: {
-              ...menuItemVariants.show,
-              transition: {
-                delay: 0.3,
-                duration: 0.2,
-              },
+              ...variants.show,
+              transition: { delay: 0.3, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.05, duration: 0.05 },
             },
           }}
         >
@@ -76,19 +71,13 @@ export function NavMenu({ isOpen }) {
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
-            hide: {
-              ...menuItemVariants.hide,
-              transition: {
-                delay: 0.1,
-                duration: 0.05,
-              },
-            },
             show: {
-              ...menuItemVariants.show,
-              transition: {
-                delay: 0.4,
-                duration: 0.2,
-              },
+              ...variants.show,
+              transition: { delay: 0.4, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.1, duration: 0.05 },
             },
           }}
         >
@@ -98,19 +87,13 @@ export function NavMenu({ isOpen }) {
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
-            hide: {
-              ...menuItemVariants.hide,
-              transition: {
-                delay: 0.15,
-                duration: 0.05,
-              },
-            },
             show: {
-              ...menuItemVariants.show,
-              transition: {
-                delay: 0.5,
-                duration: 0.2,
-              },
+              ...variants.show,
+              transition: { delay: 0.5, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.15, duration: 0.05 },
             },
           }}
         >
@@ -120,19 +103,13 @@ export function NavMenu({ isOpen }) {
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
-            hide: {
-              ...menuItemVariants.hide,
-              transition: {
-                delay: 0.2,
-                duration: 0.05,
-              },
-            },
             show: {
-              ...menuItemVariants.show,
-              transition: {
-                delay: 0.6,
-                duration: 0.2,
-              },
+              ...variants.show,
+              transition: { delay: 0.6, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.2, duration: 0.05 },
             },
           }}
         >
@@ -142,19 +119,13 @@ export function NavMenu({ isOpen }) {
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
-            hide: {
-              ...menuItemVariants.hide,
-              transition: {
-                delay: 0.25,
-                duration: 0.05,
-              },
-            },
             show: {
-              ...menuItemVariants.show,
-              transition: {
-                delay: 0.7,
-                duration: 0.2,
-              },
+              ...variants.show,
+              transition: { delay: 0.7, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.25, duration: 0.05 },
             },
           }}
         >
@@ -164,19 +135,13 @@ export function NavMenu({ isOpen }) {
           initial={false}
           animate={isOpen ? "show" : "hide"}
           variants={{
-            hide: {
-              ...menuItemVariants.hide,
-              transition: {
-                delay: 0.3,
-                duration: 0.05,
-              },
-            },
             show: {
-              ...menuItemVariants.show,
-              transition: {
-                delay: 0.8,
-                duration: 0.2,
-              },
+              ...variants.show,
+              transition: { delay: 0.8, duration: 0.2 },
+            },
+            hide: {
+              ...variants.hide,
+              transition: { delay: 0.3, duration: 0.05 },
             },
           }}
         >
